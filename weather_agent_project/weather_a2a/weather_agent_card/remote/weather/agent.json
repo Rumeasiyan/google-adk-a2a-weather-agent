@@ -1,0 +1,64 @@
+{
+  "name": "Weather Agent",
+  "description": "A helpful weather assistant that can provide current conditions and short forecasts for cities",
+  "version": "1.0.0",
+  "url": "http://localhost:8091/a2a/weather",
+  "defaultInputModes": [
+    "text/plain"
+  ],
+  "defaultOutputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "capabilities": {
+    "streaming": true,
+    "pushNotifications": false
+  },
+  "supportsAuthenticatedExtendedCard": false,
+  "skills": [
+    {
+      "id": "current_weather",
+      "name": "Current Weather",
+      "description": "Return the current weather conditions for a requested city, including temperature, humidity, wind speed, and a short condition summary.",
+      "tags": [
+        "weather",
+        "current",
+        "temperature",
+        "forecast"
+      ],
+      "examples": [
+        "What is the weather in Colombo?",
+        "Give me the current weather in London",
+        "How hot is it in Tokyo right now?"
+      ],
+      "inputModes": [
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json"
+      ]
+    },
+    {
+      "id": "weather_forecast",
+      "name": "Weather Forecast",
+      "description": "Provide a short multi-day forecast for a requested city with daily highs, lows, and weather conditions.",
+      "tags": [
+        "weather",
+        "forecast",
+        "planning",
+        "temperature"
+      ],
+      "examples": [
+        "Show me the next three days in New York",
+        "What is the forecast for Colombo?",
+        "Will it rain in London this week?"
+      ],
+      "inputModes": [
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json"
+      ]
+    }
+  ]
+}
